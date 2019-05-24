@@ -1,0 +1,33 @@
+.resume__info
+  display grid
+  grid-template-areas \
+  'image bio bio'\
+  'job-1 job-2 job-3'
+  grid-gap 2rem
+  grid-template-columns repeat(3, 1fr)
+
+.resume__image
+  grid-area image
+  margin auto
+  outline 3px solid secondary-color
+
+.resume__story
+  grid-area bio
+
+.story-title
+  font-size 1.5rem
+
+for num in 1 2 3
+  a.resume__job--{num}
+    grid-area job- +num
+
+
+.job-title,
+.job-pos
+  margin-bottom 0.7rem
+  line-height 1.3
+
+.resume__job
+  padding 2rem 1rem
+  background-color lighten(primary-color, 30)
+  border-bottom 3px solid secondary-color

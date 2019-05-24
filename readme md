@@ -1,0 +1,8 @@
+npm init
+ команды добавляю в package.json
+
+
+ git init - инит репоз
+ git add . добавить все шо есть в реп
+
+ git commit -m 'init workflow'

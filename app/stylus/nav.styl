@@ -1,0 +1,84 @@
+.nav-btn
+  position fixed
+  z-index 3
+  right 20px
+  top 20px
+  cursor pointer
+  transition 0.5s all ease-out
+  font-size 2rem
+
+.nav-btn--close
+  transform rotate(180deg)
+
+// menu overlay
+.nav
+  position fixed
+  top 0
+  width 100%
+  // opacity 0.95
+  visibility hidden
+
+.nav--show
+  visibility visible
+
+.nav__branding,
+.nav__links
+  display flex
+  flex-direction column
+  flex-wrap wrap
+  align-items center
+  justify-content center
+  // ниже ебанутое решение которое надо пофиксить
+  float left 
+  width 50%
+  height 100vh
+  overflow hidden
+
+.nav__links
+  background-color primary-color
+  transform translate3d(0, -100%, 0)
+  transition all 0.5s ease-out
+
+.nav__links--show
+  transform translate3d(0, 0, 0)
+
+.nav__branding
+  background #ccc
+  transform translate3d(0, 100%, 0)
+  transition all 0.5s ease-out
+
+.nav__branding--show
+  transform translate3d(0, 0, 0)
+
+.nav-branding__portrait
+  width 100px
+  height 100px
+  background-image url(img/photo.jpg)
+  outline 3px solid secondary-color
+
+.nav__link
+  transform translate3d(600px, 0, 0)
+  transition all 0.5s ease-out
+  display inline-block
+  padding 1rem 0
+  position relative
+  font-size 3rem
+  font-weight 700
+  text-transform uppercase
+  text-decoration none
+  color #fff
+  &:hover
+    color secondary-color
+
+.nav__link--show
+  transform translate3d(0, 0, 0)
+
+.nav__link--current
+  color secondary-color
+
+// delay each link
+
+for num in (1..4)
+  .nav__link:nth-child({num})
+    transition-delay num * 0.1s
+

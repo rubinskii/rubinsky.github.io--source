@@ -1,0 +1,130 @@
+@font-face
+  font-family Rubik
+  src url(fonts/rubik-regular.woff2)
+  font-weight normal
+  font-style normal
+
+@font-face
+  font-family Rubik
+  src url(fonts/rubik-bold.woff2)
+  font-weight bold
+  font-style normal
+
+
+text-color = #f5f3f5
+primary-color = #2c2c2c
+secondary-color = #FF3366
+
+@import 'pages/resume'
+
+
+
+@import bg-sprite;
+@import 'nav'
+
+// pages
+@import 'pages/contacts'
+
+//footer
+@import 'footer'
+
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+html, body
+  height 100%
+
+body
+  background-color primary-color
+  font-family Rubik
+  line-height 1.5
+  color #F5F3F5
+  // background-image url(img/bg.jpg)
+  // // background-attachment fixed
+  // background-repeat no-repeat
+  // background-size cover
+  &::after
+    content ''
+    position absolute
+    z-index -1
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color rgba(primary-color, 0.8)
+
+.index
+  background-image url(img/bg.jpg)
+  // background-attachment fixed
+  background-repeat no-repeat
+  background-size cover
+
+.heading--lg
+  font-size 5rem
+
+.heading--sm
+  margin-bottom 3rem
+  padding 0.3rem 1rem
+  // wrap in transparentify
+  background-color lighten(primary-color, 2)
+
+.heading--text-decorated
+  color secondary-color
+
+.menu-nav__link
+  text-decoration none
+
+// .social-links
+
+.main
+  display flex
+  flex-direction column
+  justify-content center
+  // height 100%
+  padding 3rem
+
+.social-link
+  display inline-block
+  width 50px
+  height 50px
+  margin-right 0.5rem
+  // background-image bg-icons
+  background-repeat no-repeat
+  background-position 50% 50%
+  background-size 100%
+
+.social-link__youtube
+  background-image bg_youtube
+
+.social-link__medium
+  background-image bg_medium
+
+.social-link__github
+  background-image bg_github
+
+.social-link__instagram
+  background-image bg_instagram
+
+.btn
+  display block
+  padding 0.5rem 1rem
+  border 0
+  margin-bottom 0.4rem
+  &:hover
+    background-color secondary-color
+
+.btn--light
+  @extends .btn
+  background-color lighten(primary-color, 50)
+  color #333
+
+.btn--dark
+  @extends .btn
+  background-color darken(primary-color, 50)
+  color #fff
+
+@import 'pages/projects'
+
+@import 'media-queries'

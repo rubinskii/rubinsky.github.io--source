@@ -1,0 +1,21 @@
+- var page_title = 'Контакты'
+doctype html
+html
+  include ../inc/head.pug
+  body
+    include ../inc/nav.pug
+    .main.contacts
+        h1.heading--lg.
+          #[span.heading--text-decorated Контактная] информация
+        h2.heading--sm Простые способы связаться со мной
+        .contact-boxes
+          .contact-box.
+            #[span Имейл]
+            rubinsky@yandex.ru
+          .contact-box.
+            #[span Телеграм]
+            rubinskii
+          .contact-box.
+            #[span Страница в ВК]
+            #[a(href="https://vk.com/rubinskii_k" style="color: #fff; text-decoration: none") rubinskii_k ] 
+    include ../inc/footer.pug

@@ -1,0 +1,86 @@
+
+
+@media(max-width: 768px)
+  .main
+    align-items center
+    text-align center
+  .heading--lg
+    line-height 1
+    font-size 4rem
+    margin-bottom 2rem
+  .heading--sm
+    font-size 1rem
+    margin-bottom 2rem
+  .projects__list
+    grid-template-columns repeat(2, 1fr)
+  .resume
+    text-align left !important
+  .resume__info
+    grid-template-areas 'image'\
+                        'image'\
+                        'bio'\
+                        'job-1'\
+                        'job-2'\
+                        'job-3'
+    grid-template-columns 1fr
+  .nav__branding,
+  .nav__links
+    float none
+    width 100%
+  .nav__branding
+    height 25vh
+    transform translate3d(100%, 0, 0)
+
+  .nav__links
+    height 75vh
+    transform translate3d(-100%, 0, 0)
+
+  .nav__branding--show
+    transform translate3d(0, 0, 0)
+
+  .nav__links--show
+    transform translate3d(0, 0, 0)
+
+// media-sm
+@media screen and (max-width: 500px)
+  // main section
+  .main
+    padding-left 1rem
+    padding-right 1rem
+  .heading--lg
+    font-size 2rem
+  .nav__branding,
+  .nav__links
+    float none
+    width 100%
+  .nav__link
+    line-height 1
+  .projects__list
+    // grid-template-columns 1fr
+    transition 1s all ease
+  .heading--lg
+    line-height 1
+    font-size 2.5rem
+    margin-bottom 2rem
+  .heading--sm
+    font-size 1rem
+    margin-bottom 2rem
+  .contact-box
+    font-size 1rem
+    text-align left
+  .projects__list
+    grid-template-columns 1fr
+
+
+// media-lg
+@media screen and (min-width: 769px) and (max-width: 1170px)
+  .projects__list
+    grid-template-columns repeat(3, 1fr)
+
+// media-xl
+@media screen and (min-width: 1171px)
+  .projects__list
+    grid-template-columns repeat(4, 1fr)
+
+
+
